@@ -1,0 +1,12 @@
+# Rockchip RK3588S box board LP4 V10, vendor Android-derived DTS
+BOARD_NAME="RK3588S BOX LP4 V10"
+BOARDFAMILY="rockchip-rk3588"
+BOARD_MAINTAINER=""
+BOOTCONFIG="rock-5a-rk3588s_defconfig"
+BOOT_SOC="rk3588"
+KERNEL_TARGET="vendor"
+FULL_DESKTOP="yes"
+BOOT_LOGO="desktop"
+BOOT_FDT_FILE="rockchip/rk3588s-box-v10.dtb"
+BOOT_SCENARIO="spl-blobs"
+IMAGE_PARTITION_TABLE="gpt"
