@@ -10,3 +10,9 @@ BOOT_LOGO="desktop"
 BOOT_FDT_FILE="rockchip/rk3588s-box-v10.dtb"
 BOOT_SCENARIO="spl-blobs"
 IMAGE_PARTITION_TABLE="gpt"
+
+function post_family_config_branch_vendor__rk3588s_box_v10_use_forked_vendor_kernel() {
+	declare -g KERNELSOURCE='https://github.com/lymzzyh/linux-rockchip.git'
+	declare -g KERNELBRANCH='branch:rk3588s-box-v10-vendor-support'
+	declare -g KERNEL_MAJOR_MINOR='6.1'
+}
