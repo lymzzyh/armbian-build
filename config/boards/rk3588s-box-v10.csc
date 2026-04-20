@@ -9,6 +9,7 @@ FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
 SERIALCON="ttyS2:1500000"
 BOOT_FDT_FILE="rockchip/rk3588s-box-v10.dtb"
+BOOTSCRIPT="boot-rk35xx-rk3588s-box-v10.cmd:boot.cmd"
 BOOT_SCENARIO="spl-blobs"
 IMAGE_PARTITION_TABLE="gpt"
 
