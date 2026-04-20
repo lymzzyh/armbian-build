@@ -9,9 +9,12 @@ FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
 SERIALCON="ttyS2:1500000"
 BOOT_FDT_FILE="rockchip/rk3588s-box-v10.dtb"
-BOOTSCRIPT="boot-rk35xx-rk3588s-box-v10.cmd:boot.cmd"
 BOOT_SCENARIO="spl-blobs"
 IMAGE_PARTITION_TABLE="gpt"
+
+function post_family_config__rk3588s_box_v10_set_bootscript() {
+	declare -g BOOTSCRIPT='boot-rk35xx-rk3588s-box-v10.cmd:boot.cmd'
+}
 
 function post_family_config_branch_vendor__rk3588s_box_v10_use_forked_vendor_kernel() {
 	declare -g KERNELSOURCE='https://github.com/lymzzyh/linux-rockchip.git'
