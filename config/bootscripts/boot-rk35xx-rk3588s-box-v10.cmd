@@ -32,7 +32,7 @@ if test "${logo}" = "disabled"; then setenv logo "logo.nologo"; fi
 
 if test "${console}" = "display" || test "${console}" = "both"; then setenv consoleargs "console=tty1"; fi
 if test "${console}" = "serial" || test "${console}" = "both"; then setenv consoleargs "console=ttyS2,1500000 ${consoleargs}"; fi
-if test "${earlycon}" = "on"; then setenv consoleargs "earlycon ${consoleargs}"; fi
+if test "${earlycon}" = "on"; then setenv consoleargs "earlycon=uart8250,mmio32,0xfeb50000 ${consoleargs}"; fi
 if test "${bootlogo}" = "true"; then
 	setenv consoleargs "splash plymouth.ignore-serial-consoles ${consoleargs}"
 else
